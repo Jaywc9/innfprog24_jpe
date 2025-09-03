@@ -14,24 +14,28 @@
                 office: "D1-016",
                 email: "toremake@hiof.no",
                 birthyear: 1983,
+                courses: ["innføring i programmering, kommunikasjon, UI designprosjekt, utvikling av interektive nettsider"]
             },
             {
                 name: "Daniela Blauhut",
                 office: "D1-015",
                 email: "danielb@hiof.no",
                 birthyear: 1977,
+                courses: ["designmetoder, UI designprosjekt"]
             },
             {
                 name: "Ann-Charlott Karlsen",
                 office: "D1-062",
                 email: "ackarlse@hiof.no",
                 birthyear: 1992,
+                courses: ["webutvikling, utvikling av interektive nettsider"]
             },
             {
                 name: "Ole Edvard Ørebæk",
                 office: "D1-061A",
                 email: "oledvo@hiof.no",
                 birthyear: 1993,
+                courses: ["Innføring i datasikkerhet"]
             },
 
         ]
@@ -56,6 +60,11 @@
                 <span>Alder: ${2025 - lecturer.birthyear}</span>
                 <p>Kontor: ${lecturer.office}</p>
                 <a href="mailto:${lecturer.email}">Skriv e-post til ${lecturer.name}</a>"
+                <ul>
+                ${lecturer.courses.map(course => {
+                   return `<li>${course}</li>`
+                }).join(" ")}
+                </ul>
                 </li>` 
         })
 
