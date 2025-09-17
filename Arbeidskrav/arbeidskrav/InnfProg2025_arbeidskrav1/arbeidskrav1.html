@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1 id="companyname"></h1>
+        <h1>Programmeriet</h1>
         <form>
             <input type="text" />
             <button>Søk</button>
@@ -20,13 +20,25 @@
     <main>
         <section id="employee_list">
             <article class="card">
-                <img src="avatar.png" alt="Navn Navnesen" />
-                <p>Navn Navnesen<br />navn@email.com</p>
+                <img src="man.png" alt="Hans Hansen" />
+                <p style="font-weight: bold">Hans Hansen</p> </p><p>Programmerer | Kontor: 316</p>
+                    hans.hansen@email.com</p>
             </article>
+
+
             <article class="card">
-                <img src="avatar.png" alt="Navn Navnesen" />
-                <p>Navn Navnesen<br />navn@email.com</p>
+                <img src="man2.png" alt="Jens Jensen" />
+                <p style="font-weight: bold">Jens Jensen</p><p>Programmerer | Kontor: 323</p>
+                    jens.jensen@email.com</p>
             </article>
+
+
+            <article class="card">
+                <img src="woman.png" alt="Trine Trinesdotter" />
+                <p style="font-weight: bold">Trine Trinesdotter</p><p>Programmerer | Kontor: 304</p>
+                    trine.trinesdotter@email.com</p>
+            </article>
+
         </section>
     </main>
     <footer>
@@ -35,7 +47,10 @@
         </p>
     </footer>
 
-    <scripttt>
+    
+    
+    <script>
+    //stod "scripttt" som er invalid
         //Variabel with company name
         const company = "Programmeriet"
 
@@ -47,19 +62,23 @@
         ]
 
         //Secret keys to access url and images
-        let images_folder = "img
+            //img manglet en " på slutten
+        let images_folder = "img"
         let secret_key = 0
-        let ak_key
+        //ak_key manglet en verdi
+        let ak_key = 1
         
         //Turn on or off safeguard to allow system to run
-        const safeguard = false
+                //safeguard var satt til false
+        const safeguard = true
         
         //Control of safeguard to create image folder name
         if(safeguard === true) {
             ak_key = secret_key + 1
         }
         const safe_images_folder = images_folder += ak_key
-        console.logg("Image folder: " + safe_images_folder)
+                //console.log ble skrevet "logg"
+        console.log("Image folder: " + safe_images_folder)
 
         let HTML_employees = ""
 
@@ -72,7 +91,8 @@
                     <p>${e.email}</p>
                 </article>`)
 
-                document.getElementbyId("employee_list").innerHTML = HTML_employeeees
+                //HTML_employees hadde 4 e-er
+                document.getElementbyId("employee_list").innerHTML = HTML_employees
         }
 
         //System prints
