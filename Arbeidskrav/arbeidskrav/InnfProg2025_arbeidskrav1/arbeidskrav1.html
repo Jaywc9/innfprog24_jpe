@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link href="ak1.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="ak1.css">
 </head>
 <body>
     <header>
@@ -65,8 +65,7 @@
             //img manglet en " på slutten
         let images_folder = "img"
         let secret_key = 0
-        //ak_key manglet en verdi
-        let ak_key = 1
+        let ak_key 
         
         //Turn on or off safeguard to allow system to run
                 //safeguard var satt til false
@@ -92,9 +91,9 @@
                 </article>`)
 
                 //HTML_employees hadde 4 e-er
-                document.getElementbyId("employee_list").innerHTML = HTML_employees
+                document.getElementById("employee_list").innerHTML = HTML_employees
         }
-
+    //liten B i "getElementById"
         //System prints
         document.getElementById("companyname").innerHTML = company
     </script>
