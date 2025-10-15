@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeidskrav 2</title>
+</head>
+<body>
+    <h1>Arbeidskrav 2</h1>
+    <p>Denne nettsiden skal ha noen ulike funksjoner, som beskrevet i <a href="https://hiof.instructure.com/courses/9942/assignments/46701" target="_blank">oppgaveteksten i canvas.</a></p>
+    <h2>Problem 1</h2>
+    <div id="fargeResultat"></div>
+    <h2>Problem 2</h2>
+    <input type="text" id="inputOrd" placeholder="Skriv et ord" />
+    <button id="sjekkOrdBtn">Sjekk ord</button>
+    <div id="resultatOrd"></div>
+    <h2>Problem 3</h2>
+    
+
+    <script>
+        //Din kode for å løse problem 1 her.
+    function HexGenerator() {
+      const tegn = "0123456789ABCDEF"   
+      let hexakode = "#"
+
+      for (let i = 0; i < 6; i++) { 
+        const tilfeldigIndex = Math.floor(Math.random() * tegn.length)
+        hexakode += tegn[tilfeldigIndex];
+      }
+      return hexakode
+    }
+
+        const farge = HexGenerator();
+        document.getElementById("fargeResultat").textContent = "Tilfeldig fargekode: " + farge
+
+
+
+        //Din kode for å løse problem 2 her.
+        function finnOrd() {
+        let ord = ["betingelse", "algoritme", "problemløsning"]
+        let input = document.getElementById("inputOrd").value.toLowerCase()
+
+        if (ord.includes(input)) {
+        document.getElementById("resultatOrd").textContent = "Ordet finnes i listen"
+        } else {
+        document.getElementById("resultatOrd").textContent = "Ordet finnes ikke i listen"}
+        }
+
+
+    document.getElementById("sjekkOrdBtn").addEventListener("click", finnOrd)
+
+
+
+
+
+
+
+    //Din kode for å løse problem 3 her.
+        const tall_array_en = [9, 13, 5, 62, 11, 6, 28, 31, 17]
+        const tall_array_to = [23, 76, 88, 13, 56, 90, 42]
+
+        function finnGjennomsnitt(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum = sum + arr[i];
+    }
+    let gjennomsnitt = sum / arr.length; 
+    return gjennomsnitt;
+  }
+
+  //skriver ut resultatene på nettsiden
+  document.write("Gjennomsnitt 1: " + finnGjennomsnitt(tall_array_en) + "<br>")
+  document.write("Gjennomsnitt 2: " + finnGjennomsnitt(tall_array_to))
+
+    </script>
+</body>
+</html>
